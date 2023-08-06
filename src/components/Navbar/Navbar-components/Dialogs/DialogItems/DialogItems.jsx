@@ -7,6 +7,11 @@ const DialogItem = (props) => {
   return (
     <div>
       <div className={d.dialog}>
+        <img
+          className={d.dialogs__avatar}
+          src="https://klike.net/uploads/posts/2019-03/1551511801_1.jpg"
+          alt="ava"
+        />
         <NavLink to={path}>{props.name}</NavLink>
       </div>
     </div>

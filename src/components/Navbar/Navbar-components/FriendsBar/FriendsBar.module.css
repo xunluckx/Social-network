@@ -1,0 +1,32 @@
+.friends__bar {
+  margin-top: 50px;
+}
+
+.friends__title {
+  font-size: 30px;
+  color: white;
+}
+
+.friends__items {
+  display: flex;
+  width: 33%;
+  margin-top: 10px;
+}
+
+.friends__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 10px;
+}
+
+.friends__names {
+  font-size: 13px;
+  color: white;
+}
+
+.friends__avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}

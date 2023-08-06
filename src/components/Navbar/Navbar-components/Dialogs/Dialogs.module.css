@@ -1,20 +1,19 @@
 .dialogs {
+  padding: 10px;
   display: grid;
   grid-template-columns: 2fr 10fr;
-}
-
-.dialogs__items {
 }
 
 .dialogs__items .active {
   color: red;
 }
 
-.dialog .active {
+.dialogs__avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
 }
 
-.messages__items {
-}
-
-.message {
+.dialogs__items {
+  padding-left: 10px;
 }

@@ -1,14 +1,18 @@
 import MyPosts from './MyPosts/MyPosts';
-import p from '../Profile/ProfileInfo/ProfileInfo';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 import ProfileBackground from './ProfileInfo/Background/ProfileBackground';
 
-const Profile = () => {
+const Profile = (props) => {
   return (
     <div>
       <ProfileBackground />
       <ProfileInfo />
-      <MyPosts />
+      <MyPosts
+        posts={props.profilePage.posts}
+        addPost={props.addPost}
+        newPostText={props.profilePage.newPostText}
+        updateNewPostText={props.updateNewPostText}
+      />
     </div>
   );
 };
