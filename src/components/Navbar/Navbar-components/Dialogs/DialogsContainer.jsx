@@ -2,11 +2,11 @@ import React from 'react';
 import {
   addMessageCreator,
   updateNewMessageTextCreator,
-} from '../../../../redux/messagesReducer';
+} from '../../../../redux/dialogsReducer';
 import Dialogs from './Dialogs';
 
 const DialogsContainer = (props) => {
-  let state = props.store.getState().messagesPage;
+  let state = props.store.getState().dialogsPage;
 
   let addMessage = () => {
     props.store.dispatch(addMessageCreator());
@@ -20,7 +20,7 @@ const DialogsContainer = (props) => {
     <Dialogs
       updateNewMessageTextCreator={onMessageChange}
       addMessage={addMessage}
-      messagesPage={state}
+      dialogsPage={state}
     />
   );
 };

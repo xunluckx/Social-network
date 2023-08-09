@@ -18,7 +18,7 @@ let initialState = {
   newMessageText: 'message',
 };
 
-const messagesReducer = (state = initialState, action) => {
+const dialogsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_MESSAGE:
       let newMessage = {
@@ -44,4 +44,4 @@ export const updateNewMessageTextCreator = (text) => ({
   newMessage: text,
 });
 
-export default messagesReducer;
+export default dialogsReducer;
