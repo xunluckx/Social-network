@@ -7,31 +7,25 @@ import News from './components/Navbar/Navbar-components/News/News';
 import Music from './components/Navbar/Navbar-components/Music/Music';
 import Settings from './components/Navbar/Navbar-components/Settings/Settings';
 import DialogsContainer from './components/Navbar/Navbar-components/Dialogs/DialogsContainer';
-import storeContext from './storeContext';
 
 const App = () => {
   return (
-    <storeContext.Consumer>
-      {(store) => {
-        return (
-          <BrowserRouter>
-            <div className="app__wrapper">
-              <Header />
-              <Navbar state={store.getState()} />
-              <div className="app__wrapper-content">
-                <Routes>
-                  <Route path="/profile" element={<Profile />} />
-                  <Route path="/dialogs/*" element={<DialogsContainer />} />
-                  <Route path="/news" element={<News />} />
-                  <Route path="/music" element={<Music />} />
-                  <Route path="/settings" element={<Settings />} />
-                </Routes>
-              </div>
-            </div>
-          </BrowserRouter>
-        );
-      }}
-    </storeContext.Consumer>
+    <BrowserRouter>
+      <div className="app__wrapper">
+        <Header />
+        <Navbar />
+        {/*state={props.store.getState()}*/}
+        <div className="app__wrapper-content">
+          <Routes>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/dialogs/*" element={<DialogsContainer />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/music" element={<Music />} />
+            <Route path="/settings" element={<Settings />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 };
 
