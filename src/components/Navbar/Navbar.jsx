@@ -23,10 +23,10 @@ const Navbar = (props) => {
       </div>
       <div>
         <NavLink
-          to="/news"
+          to="/Users"
           className={(navData) => (navData.isActive ? n.active : n.item)}
         >
-          News
+          Users
         </NavLink>
       </div>
       <div>
